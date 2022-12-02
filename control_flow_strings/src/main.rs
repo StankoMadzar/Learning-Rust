@@ -8,12 +8,12 @@ fn main() {
     // This consumes the `args` vector to iterate through each String
     for arg in args {
         if arg == "sum" {
-            sum()
+            sum();
         } else if arg == "double" {
-            double()
+            double();
         } else {
-            count(arg)
-        };
+            count(arg);
+        }
     }
 }
 
@@ -30,7 +30,7 @@ fn double() {
     let mut count = 0;
     let mut x = 1;
     while x < 500 {
-        x = x * 2;
+        x *= 2;
         count += 1;
     }
 
