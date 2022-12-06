@@ -16,7 +16,7 @@ struct Obstacle {
 }
 
 impl Obstacle {
-    fn new (x: i32, score: i32) -> Self {
+    fn new(x: i32, score: i32) -> Self {
         let mut random = RandomNumberGenerator::new();
         Obstacle {
             x,
@@ -25,7 +25,7 @@ impl Obstacle {
         }
     }
 
-    fn render (&mut self, ctx: &mut BTerm, player_x : i32) {
+    fn render(&mut self, ctx: &mut BTerm, player_x : i32) {
         let screen_x = self.x - player_x;
         let half_size = self.size / 2;
         
@@ -84,7 +84,7 @@ impl Player {
         );
     }
 
-    fn gravity_and_move (&mut self) {
+    fn gravity_and_move(&mut self) {
         if self.velocity < 2.0 {
             self.velocity += 0.2;
         }
