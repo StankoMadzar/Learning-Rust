@@ -4,7 +4,6 @@ enum GameMode {
     Playing, 
     End,
 }
-
 struct Player {
     x: i32, 
     y: i32,
