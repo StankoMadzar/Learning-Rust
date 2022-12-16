@@ -25,8 +25,7 @@ fn eat (argument : String) -> bool {
 }
 
 fn bedazzle (argument : &mut String) {
-    (argument*). 
-    // Ovde si stao 
+    (*argument) = String::from("sparkly");
 }
 
 fn main() {
@@ -46,17 +45,9 @@ fn main() {
     } else {
         println!("Not bananas");
     }
-
-
-    // Challenge: Write a function "bedazzle" that takes a mutable reference to a String and
-    // ignores what is in the string and replaces the contents of the string with the String
-    // "sparkly". Then uncomment the code below.
-    //
-    // Hint: You will need to dereference the mutable reference in order to assign it a
-    // new value.
-    //
-    // let mut material = "mud".to_string();
-    // println!("This material is just `{}`.", material);
-    // bedazzle(&mut material);
-    // println!("Wow! Now the material is `{}`!", material);
+    
+    let mut material = "mud".to_string();
+    println!("This material is just `{}`.", material);
+    bedazzle(&mut material);
+    println!("Wow! Now the material is `{}`!", material);
 }
